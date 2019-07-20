@@ -6,6 +6,7 @@ public class ExchangeValue {
     private String from, to;
     private Long id;
     private BigDecimal conversionMultiple;
+    private int port;
 
     public ExchangeValue() {
     }
@@ -31,5 +32,13 @@ public class ExchangeValue {
 
     public BigDecimal getConversionMultiple() {
         return conversionMultiple;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
     }
 }
