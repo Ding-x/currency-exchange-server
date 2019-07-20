@@ -1,9 +1,17 @@
 package com.dustyding.microservice.cunrrencyexchangeserver;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class ExchangeValue {
-    private String from, to;
+    @Column(name = "currency_from")
+    private String from;
+    @Column(name = "currency_to")
+    private String  to;
+    @Id
     private Long id;
     private BigDecimal conversionMultiple;
     private int port;
